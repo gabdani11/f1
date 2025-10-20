@@ -10,6 +10,7 @@ html, body {
   width: 100%;
   font-family: "GeneralSans-Variable", sans-serif;
   font-weight: 400;
+  background-color: black;
 }
 
 /*---------Header Section----------*/
@@ -21,6 +22,7 @@ header {
   padding: 0px 1.25rem;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
 }
 header img {
   width: 3rem;
@@ -154,14 +156,20 @@ header i {
 /*-----------Section-2---------*/
 .track-section {
   width: 100%;
+  max-width: 1600px;
+  margin: auto;
   padding: 2rem 1rem;
   background-color: black;
   color: white;
 }
 .track-section h2 {
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 4vw, 2rem);
   font-weight: 700;
   width: 60%;
+}
+.track-section .center {
+  display: flex;
+  flex-direction: column;
 }
 .track-section .center .top-div {
   display: flex;
@@ -190,16 +198,19 @@ header i {
   padding: 2rem 0px 7rem 0px;
 }
 .track-section .center .top-div .div2 img {
-  width: 60%;
-  max-width: 220px;
+  width: 220px;
 }
 .track-section .center .top-div .div2 p {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 95;
+  width: 95%;
+  max-width: 300px;
 }
 .track-section .center .bottom-div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding-top: 2rem;
 }
 .track-section .center .bottom-div .div1 h4 {
@@ -211,10 +222,85 @@ header i {
 .track-section .center .bottom-div .div1 small {
   display: block;
 }
+.track-section .center .bottom-div .div2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 290px;
+}
 .track-section .center .bottom-div .div2 #monza-img {
   width: 100%;
-  max-width: 300px;
+  max-width: 100px;
+  align-self: flex-end;
 }
 .track-section .center .bottom-div .div2 #suzuka-img {
+  width: 65%;
+  border: 2px solid gray;
+}
+.track-section .center .bottom-div .div3 {
+  align-self: flex-end;
+}
+.track-section .center .bottom-div .div3 h4 {
+  display: inline;
+}
+.track-section .center .bottom-div .div3 img {
+  width: 1rem;
+}
+.track-section .center .bottom-div .div3 small {
+  display: block;
+}
+.track-section .bottom {
   width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-top: clamp(2rem, 10vw, 10rem);
+}
+.track-section .bottom div {
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .track-section {
+    padding-top: 7rem;
+  }
+  .track-section h2 {
+    text-align: center;
+  }
+  .track-section .center {
+    flex-direction: row;
+  }
+  .track-section .center .top-div {
+    flex: 1;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  .track-section .center .top-div .div1 {
+    width: auto;
+    align-self: flex-start;
+    padding-top: 2rem;
+  }
+  .track-section .center .top-div .div2 {
+    width: auto;
+  }
+  .track-section .center .bottom-div {
+    flex: 1;
+    justify-content: space-between;
+    position: relative;
+  }
+  .track-section .center .bottom-div .div2 {
+    max-width: 400px;
+  }
+  .track-section .center .bottom-div .div2 #suzuka-img {
+    width: 75%;
+  }
+  .track-section .center .bottom-div .div3 {
+    position: absolute;
+    bottom: 2rem;
+    left: clamp(10rem, 40%, 15rem);
+  }
 }
