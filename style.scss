@@ -371,3 +371,120 @@ header{
 
     }
 }
+/*-----------F1 Car Section---------*/
+.f1-car{
+    width: 100%;
+    padding: 2rem 1rem;
+    color: white;
+    
+
+    .container{
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 15rem;
+        .box1{
+            width: 100%;
+            max-width: 350px;
+            
+            h2{
+                width: 14ch;
+                font-size: clamp(1.25rem, 4vw, 2rem);
+                font-weight: 700;
+            }
+            .bottom{
+                
+                position: relative;
+                padding-top:3rem;
+                margin-top: 7rem;
+
+           p{
+                max-width: 250px;
+                
+            }
+
+            img{
+                width: 80%;
+                max-width: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: -1;
+                opacity: 0.3;
+                
+            }
+        }
+        }
+        .box2{
+            position: relative;
+            display: flex;
+            justify-content: end;
+            padding-bottom: 3.5rem;
+            width: 100%;
+            max-width: 350px;
+            align-self: flex-end;
+            
+            img{
+                width: 80%;
+                
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+                opacity: 0.3;
+            }
+        }
+        .image-box{
+            width: 100%;
+            position: absolute;
+            top: 20%;
+            left: 0;
+            z-index: -2;
+            display: flex;
+            justify-content: center;
+            
+            
+           
+            img{
+                width: 100%;
+                max-width: 25rem;
+                
+                
+            }
+        }
+    }
+}
+@media(min-width:768px){
+    .f1-car{
+        .container{
+            background-color: lightpink;
+            flex-direction: row-reverse;
+
+            .box1{
+                background-color: aqua;
+                max-width: none;
+
+                h2{
+                    width: auto;
+                }
+                .bottom{
+                    margin-top: 0;
+                    padding-top: 0;
+                }
+
+
+            }
+            .box2{
+                background-color: lightgoldenrodyellow;
+                align-self: flex-start;
+                
+            }
+            .image-box{
+                top: 0%;
+                width: 50%;
+            }
+
+        }
+    }
+}
