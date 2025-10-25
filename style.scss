@@ -415,6 +415,9 @@ header{
                 
             }
         }
+        .shape{
+            display: none;
+        }
         }
         .box2{
             position: relative;
@@ -458,12 +461,16 @@ header{
 @media(min-width:768px){
     .f1-car{
         .container{
-            background-color: lightpink;
+            
             flex-direction: row-reverse;
-
+            
+            gap: 22rem;
             .box1{
-                background-color: aqua;
+                
                 max-width: none;
+                background-color: pink;
+                
+               
 
                 h2{
                     width: auto;
@@ -471,13 +478,46 @@ header{
                 .bottom{
                     margin-top: 0;
                     padding-top: 0;
+                    background-color: turquoise;
+                    padding-top:0rem;
+                margin-top: 0rem;
+                    
+
+                    img{
+                        position: none;
+                        opacity: 1;
+                        width: 300px;
+                        background-color: red;
+                        z-index: 2;
+                        
+                    }
+                }
+                .shape{
+                    display: block;
+                    background-color: green;
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width: 80%;
+                        max-width: 300px;}
                 }
 
 
             }
             .box2{
-                background-color: lightgoldenrodyellow;
-                align-self: flex-start;
+                
+                justify-content: start;
+                background-color: turquoise;
+                padding-top: 3rem;
+                
+                img{
+                    display: none;
+                }
+                p{
+                    width: 300px;
+                }
+
+
                 
             }
             .image-box{

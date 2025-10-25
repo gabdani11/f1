@@ -343,6 +343,9 @@ header i {
   z-index: -1;
   opacity: 0.3;
 }
+.f1-car .container .box1 .shape {
+  display: none;
+}
 .f1-car .container .box2 {
   position: relative;
   display: flex;
@@ -376,12 +379,12 @@ header i {
 
 @media (min-width: 768px) {
   .f1-car .container {
-    background-color: lightpink;
     flex-direction: row-reverse;
+    gap: 22rem;
   }
   .f1-car .container .box1 {
-    background-color: aqua;
     max-width: none;
+    background-color: pink;
   }
   .f1-car .container .box1 h2 {
     width: auto;
@@ -389,10 +392,37 @@ header i {
   .f1-car .container .box1 .bottom {
     margin-top: 0;
     padding-top: 0;
+    background-color: turquoise;
+    padding-top: 0rem;
+    margin-top: 0rem;
+  }
+  .f1-car .container .box1 .bottom img {
+    position: none;
+    opacity: 1;
+    width: 300px;
+    background-color: red;
+    z-index: 2;
+  }
+  .f1-car .container .box1 .shape {
+    display: block;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+  }
+  .f1-car .container .box1 .shape img {
+    width: 80%;
+    max-width: 300px;
   }
   .f1-car .container .box2 {
-    background-color: lightgoldenrodyellow;
-    align-self: flex-start;
+    justify-content: start;
+    background-color: turquoise;
+    padding-top: 3rem;
+  }
+  .f1-car .container .box2 img {
+    display: none;
+  }
+  .f1-car .container .box2 p {
+    width: 300px;
   }
   .f1-car .container .image-box {
     top: 0%;
