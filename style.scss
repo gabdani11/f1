@@ -19,6 +19,28 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: white;
+
+    .mobile-nav{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        z-index: 10;
+        width: 90%;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.9);
+        height: 0;
+        overflow: hidden;
+        transition: all 0.9s ease;
+        
+        ol{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0px;
+            
+        }
+    }
     
     img{
         width: 3rem;
@@ -50,7 +72,7 @@ header{
             
         }
     }
-    i{
+    #btn{
          display: none;
          font-size: 1.25rem;
     }
@@ -60,10 +82,13 @@ header{
     header{
         padding: 0px 1rem;
 
-        i{
+        #btn{
             display: block;
         }
-        nav ol{
+        #closebtn{
+            display: none;
+        }
+        .desktop-nav{
         display:none;
     }
 }
@@ -537,6 +562,8 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    max-width: 1600px;
+    margin: auto;
     .top{
         display: flex;
         flex-direction: column;
