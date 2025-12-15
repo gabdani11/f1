@@ -33,9 +33,9 @@ header .mobile-nav {
   z-index: 10;
   width: 90%;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
-  height: 0;
+  height: 0px;
   overflow: hidden;
-  transition: all 0.9s ease;
+  transition: all 0.7s ease;
 }
 header .mobile-nav ol {
   display: flex;
